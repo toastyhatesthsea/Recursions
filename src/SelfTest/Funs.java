@@ -76,13 +76,21 @@ public class Funs
         }
     }
 
-    public static String moreAsterisks(int numberOfAsterisks, String asterisks)
+    /**
+     * Write a recursive method to produce a pattern of n lines of asterisks. The first line contains one asterisk,
+     * the next line contains two, and so on, up to the nth line, which contains n asterisks.
+     * Line number n+1 again contains n asterisks, the next line has n–1 asterisks, and so on,
+     * until line number 2n, which has just one asterisk.
+     * @param numberOfAsterisks int
+     * @param asterisks String
+     * @return String
+     */
+    public static void moreAsterisks(int numberOfAsterisks, String asterisks)
     {
         if (numberOfAsterisks == 1)
         {
             System.out.println(asterisks);
             System.out.println(asterisks);
-            return asterisks;
         }
         else
         {
@@ -91,7 +99,6 @@ public class Funs
             String moreAsterisks = asterisks + "*";
             moreAsterisks(numberOfAsterisks - 1, moreAsterisks);
             System.out.println(asterisks);
-            return asterisks;
         }
     }
 
