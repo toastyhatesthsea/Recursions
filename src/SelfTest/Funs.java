@@ -81,14 +81,15 @@ public class Funs
         if (numberOfAsterisks == 1)
         {
             System.out.println(asterisks);
+            System.out.println(asterisks);
             return asterisks;
         }
         else
         {
             //String asterisks = "";
             System.out.println(asterisks);
-            asterisks = asterisks + "*";
-            moreAsterisks(numberOfAsterisks-1, asterisks);
+            String moreAsterisks = asterisks + "*";
+            moreAsterisks(numberOfAsterisks - 1, moreAsterisks);
             System.out.println(asterisks);
             return asterisks;
         }
@@ -111,6 +112,6 @@ class FunsTest
 
         //Funs.reverseArray(anArray, 1, 3);
 
-        Funs.moreAsterisks(2, "*");
+        Funs.moreAsterisks(4, "*");
     }
 }
