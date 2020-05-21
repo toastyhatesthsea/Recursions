@@ -76,6 +76,24 @@ public class Funs
         }
     }
 
+    public static String moreAsterisks(int numberOfAsterisks, String asterisks)
+    {
+        if (numberOfAsterisks == 1)
+        {
+            System.out.println(asterisks);
+            return asterisks;
+        }
+        else
+        {
+            //String asterisks = "";
+            System.out.println(asterisks);
+            asterisks = asterisks + "*";
+            moreAsterisks(numberOfAsterisks-1, asterisks);
+            System.out.println(asterisks);
+            return asterisks;
+        }
+    }
+
 }
 
 class FunsTest
@@ -91,6 +109,8 @@ class FunsTest
 
         //double answer2 = Funs.sumover(-3);
 
-        Funs.reverseArray(anArray, 1, 3);
+        //Funs.reverseArray(anArray, 1, 3);
+
+        Funs.moreAsterisks(2, "*");
     }
 }
